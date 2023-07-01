@@ -10,7 +10,7 @@ export const deleteReferral = (referral) => axios.delete(baseUrl + `/${referral.
 
 
 
-export default {
+ const referralService = {
     getReferrals,
     getReferral,
     addReferral,
@@ -19,5 +19,5 @@ export default {
 };
 
 
-
+export default referralService;
 

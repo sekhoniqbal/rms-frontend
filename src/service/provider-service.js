@@ -9,8 +9,7 @@ export const updateProvider = (provider) => axios.put(baseUrl + `/${provider.id}
 export const deleteProvider = (provider) => axios.delete(baseUrl + `/${provider.id}`);
 export const getProviderReferrals = (provider) => axios.get(baseUrl + `/${provider.id}/referrals`);
 
-
-export default {
+ const providerService = {
     getProviders,
     getProvider,
     addProvider,
@@ -20,6 +19,7 @@ export default {
 };
 
 
+export default providerService;
 
 
 

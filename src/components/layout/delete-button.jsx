@@ -4,7 +4,7 @@ export default function DeleteButton({ onDelete }) {
     const [showConfirmDialog, setShowConfirmDialog] = useState(false);
     return (
         <div className="d-inline-block">
-            <i class="ri-delete-bin-line delete" onClick={() => setShowConfirmDialog(true)}>
+            <i title="Delete" className="ri-delete-bin-line delete" onClick={() => setShowConfirmDialog(true)}>
             </i >
             {showConfirmDialog && (
                 <div className="fixed-top w-100 h-100 d-flex justify-content-center align-items-center"
@@ -19,8 +19,8 @@ export default function DeleteButton({ onDelete }) {
                             {/* <input id="confirm-delete" className="mr-2" type="checkbox" /> */}
                             <label htmlFor="confirm-delete">Are you sure you want to delete this item? </label>
                         </div>
-                        <button class="btn btn-secondary btn-sm mx-2" onClick={()=>setShowConfirmDialog(false)}>Cancel</button>
-                        <button class="btn btn-danger btn-sm mx-2" onClick={onDelete}>Delete</button>
+                        <button className="btn btn-secondary btn-sm mx-2" onClick={()=>setShowConfirmDialog(false)}>Cancel</button>
+                        <button className="btn btn-danger btn-sm mx-2" onClick={onDelete}>Delete</button>
                     </div>
 
                 </div>

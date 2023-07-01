@@ -20,14 +20,14 @@ export default function PatientDetails({ params: { id } }) {
     })
 
 
-    return <div class="Patients recent--patients">
-        <div class="title ">
-            <h2 class="section--title"> Patient Details</h2>
+    return <div className="Patients recent--patients">
+        <div className="title ">
+            <h2 className="section--title"> Patient Details</h2>
             <Link href="/patients">
-                <button class="add">View All</button>
+                <button className="add">View All</button>
             </Link>
         </div>
-        <h4 class="section--title mt-5 ">Patient Info</h4>
+        <h4 className="section--title mt-5 ">Patient Info</h4>
         {fetchInProgress ? <div>Fetching patient data....</div>
             : error ? <div>Failed to fetch patient. Reason: {error}</div>
                 : !patient ? <div>No patient details available</div>
@@ -38,7 +38,7 @@ export default function PatientDetails({ params: { id } }) {
                         edit
                     />
         }
-        <h4 class="section--title mt-5 ">Patient Referrals</h4>
+        <h4 className="section--title mt-5 ">Patient Referrals</h4>
         {fetchReferralsInProgress ? <div>Fetching referral data....</div>
             : errorRefferals ? <div className="text-danger">Failed to fetch referrals. Reason: {errorRefferals}</div>
                 : !referrals || !referrals.length ? <div>This patient has no referrals</div>

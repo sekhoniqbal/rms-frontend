@@ -18,14 +18,14 @@ export default function ReferralDetails({ params: { id } }) {
     })
 
 
-    return <div class="Referrals recent--referrals">
-        <div class="title ">
-            <h2 class="section--title"> Referral Details</h2>
+    return <div className="Referrals recent--referrals">
+        <div className="title ">
+            <h2 className="section--title"> Referral Details</h2>
             <Link href="/referrals">
-                <button class="add">View All</button>
+                <button className="add">View All</button>
             </Link>
         </div>
-        <h4 class="section--title mt-5 ">Referral Info</h4>
+        <h4 className="section--title mt-5 ">Referral Info</h4>
         {fetchInProgress ? <div>Fetching referral data....</div>
             : error ? <div>Failed to fetch referral. Reason: {error}</div>
                 : !referral ? <div>No referral details available</div>

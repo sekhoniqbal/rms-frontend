@@ -30,13 +30,13 @@ export default function SpecialityTable({ data, details, edit, compact, onDelete
                 size: 150,
                 Cell: ({ row }) => (
                     <span key={row.original.id}>
-                        {details && <Link href={`/specialities/${row.original.id}/details`}><i class="ri-edit-box-line more"></i></Link>}
-                        {edit && <Link href={`/specialities/${row.original.id}/edit`}><i class="ri-edit-line edit"></i></Link>}
+                        {details && <Link href={`/specialities/${row.original.id}/details`}><i title="Details" className="ri-edit-box-line more"></i></Link>}
+                        {edit && <Link href={`/specialities/${row.original.id}/edit`}><i title="Edit" className="ri-edit-line edit"></i></Link>}
                         {onDelete && <DeleteButton onDelete={() => onDelete(row.original.id)} />}
                     </span>
                 )
             }
-        ], []);
+        ],[onDelete,details,edit]);
     return (
         <MaterialReactTable
             columns={columns}

@@ -10,7 +10,7 @@ export const updatePatient = (patient) => axios.put(baseUrl + `/${patient.id}`, 
 export const deletePatient = (patient) => axios.delete(baseUrl + `/${patient.id}`);
 export const getPatientReferrals = (patient) => axios.get(baseUrl + `/${patient.id}/referrals`);
 
-export default {
+ const patientService ={
     getPatients,
     getPatient,
     addPatient,
@@ -19,8 +19,7 @@ export default {
     getPatientReferrals
 };
 
-
-
+export default patientService;
 
 
 

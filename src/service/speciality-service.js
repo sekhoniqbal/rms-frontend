@@ -11,7 +11,7 @@ export const getSpecialityReferrals = (speciality) => axios.get(baseUrl + `/${sp
 export const getSpecialityProviders = (speciality) => axios.get(baseUrl + `/${speciality.id}/providers`);
 export const getSuggestedProvider = (speciality) => axios.get(baseUrl + `/${speciality.id}/suggestedProvider`);
 
-export default {
+ const specialityService = {
     getSpecialities,
     getSpeciality,
     addSpeciality,
@@ -22,7 +22,7 @@ export default {
     getSuggestedProvider
 };
 
-
+export default specialityService;
 
 
 
