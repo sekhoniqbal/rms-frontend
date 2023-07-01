@@ -27,8 +27,8 @@ const MainContent = () => {
       <Route path="/providers" component={Providers} />
       <Route path="/patients" component={Patients} />
       <Route path="/specialities" component={Specialities} />
-      <Route>
-      <button onClick={populateDbWithData}>Generate</button>
+      <Route path="/generate">
+        <button onClick={populateDbWithData}>Generate</button>
       </Route>
 
       <Route path="/patients/:id/details" component={PatientDetails} />
