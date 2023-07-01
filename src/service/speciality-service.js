@@ -1,6 +1,7 @@
 import axios from 'axios';
+import getAPIServerURL from '../others/getAPIServerURL';
 
-const baseUrl = `http://localhost:8080/api/specialities`;
+const baseUrl = `${getAPIServerURL()}/api/specialities`;
 export const getSpecialities = () => axios.get(baseUrl);
 export const getSpeciality = (speciality) => axios.get(baseUrl + `/${speciality.id}`);
 export const addSpeciality = (speciality) => axios.post(baseUrl, speciality);

@@ -1,6 +1,7 @@
 import axios from 'axios';
+import getAPIServerURL from '../others/getAPIServerURL';
 
-const baseUrl = `http://localhost:8080/api/referrals`;
+const baseUrl = `${getAPIServerURL()}/api/referrals`;
 export const getReferrals = () => axios.get(baseUrl);
 export const getReferral = (referral) => axios.get(baseUrl + `/${referral.id}`);
 export const addReferral = (referral) => axios.post(baseUrl, referral);

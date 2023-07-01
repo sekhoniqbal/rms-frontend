@@ -1,6 +1,7 @@
 import axios from 'axios';
+import getAPIServerURL from '../others/getAPIServerURL';
 
-const baseUrl = `http://localhost:8080/api/providers`;
+const baseUrl = `${getAPIServerURL()}/api/providers`;
 export const getProviders = () => axios.get(baseUrl);
 export const getProvider = (provider) => axios.get(baseUrl + `/${provider.id}`);
 export const addProvider = (provider) => axios.post(baseUrl, provider);
